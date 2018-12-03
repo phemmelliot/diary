@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+before_script:
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- "./cc-test-reporter before-build"
+script:
+- yarn build
+- yarn test -u
+after_script:
+- "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
+env:
+  global:
+  - secure: b7/B67HvFzrvl86n6aoDMNTTKRv3Qf6RcbqLiDmuF0KgtWf5SzHmFJxPCTkMK2cXiXYFQTGzSccT2426IKbXBBrr/RE4ovMENuf1fYh2keRvshs6+lLWrvj8J5OCD2ANtFHzOnKwzxKmMeAwt/lfbmb0oyCvjtikGUS4/NLgi+wn0QFz7BtWSMaDwMZz/TWrNs6lRSFHDoJXOWVLr1fimJwwMG1nl8z0BqMCEWywtWISWPw5X2gWA/V2eLfpkUdhKrpF7qaMLARzg2nITq1konWYul24sN4jvHwHz+DDT8IQSm2Umq73hY8QVwj6dvEAyHXk0lDlUs9s59QolEPqrIMGKU9LVXAnBy31E6+aNKEA9Vd7jS97EOjOAQLDkjHtjVZY1QmtKT+oZRjEY+YwScCPQaaLiVYYGGVaaNTX+5BeD10baUBpM/8E1RgqwGOCHCuzVOBFJRTnT/54qXjiUqnz9GUgCmQWExmJb5ClLPcYagWaueQhlqZOXHIcHDoq+6E6An/VhTB+pfnExcLMafZqb+N+CQ/fYjEjyX3Dt8bLK0w0qYWsDGEW9/j7RkkVHVkb5MDyhSLIuccBMeuk86a5eQxxPQUWs/l4sKcf2wTMKOVY7d7mcToz1Hl4MUBKhCufFQRCOftTvMK3bpBFlxUt+xlTGhyUxxllIKNZO9o=
