@@ -1,11 +1,11 @@
 {
-  "name": "lotus-ah-frontend",
+  "name": "diary frontend",
   "version": "1.0.0",
   "description": "client implementation of the lotus author haven",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/**/*.js src/**/*.jsx --fix",
-    "start": "node src/index.js",
+    "start": "babel-node src/index.js",
     "build": "babel-node ./node_modules/webpack/bin/webpack.js --config webpack.config.prod.js",
     "start:dev": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack.config.dev.js --hot --color --open",
     "test": " NODE_ENV=test SERVER_URL=http://localhost:5000 jest",
@@ -33,14 +33,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andela/lotus-ah-frontend.git"
+    "url": "git+https://github.com/phemmelliot/diary.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andela/lotus-ah-frontend/issues"
+    "url": "https://github.com/andela/phemmelliot/diary"
   },
-  "homepage": "https://github.com/andela/lotus-ah-frontend#readme",
+  "homepage": "https://github.com/phemmelliot/diary#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
