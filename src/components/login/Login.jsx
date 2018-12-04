@@ -47,9 +47,9 @@ class Login extends Component {
           errorMessage: 'An error occurred, please try again',
           error: true
         });
-      } else if (response.status === 401) {
+      } else if (response.status === 409) {
         this.setState({
-          errorMessage: 'User does not exist',
+          errorMessage: 'User already exist',
           error: true
         });
       }
@@ -96,11 +96,6 @@ class Login extends Component {
     return (
         <div className='login-body'>
           <header id='myHeader'>
-            {this.state.error
-              ? <div>
-                <p>{this.state.errorMessage}</p>
-             </div>
-              : ''}
             <div className='container'>
               <div id='branding'>
                 <h1>
@@ -127,6 +122,11 @@ class Login extends Component {
             </div>
           </header>
           <div className='errorHeaderNone' id='errorHead' />
+          {this.state.error
+            ? <div className='errorHeader' id='errorHead'>
+                <p>{this.state.errorMessage}</p>
+             </div>
+            : ''}
           <div className='loaderNone' id='loadDiv' />
           <div className='loginbox' id='logBox'>
             <h1>Login Here</h1>
@@ -138,7 +138,7 @@ class Login extends Component {
                 name='email'
                 value={this.state.email}
                 onChange={this.handleChange}
-                placeholder='Enter Username'
+                placeholder='Enter Email'
                 id='email'
               />
               <p>Password</p>
@@ -148,6 +148,7 @@ class Login extends Component {
                 value={this.state.password}
                 onChange={this.handleChange}
                 id='password'
+                autoComplete="new-password"
               />
               <input type='submit' name='' value='Login' />
               <a href='./signup'>Create an account</a>
@@ -158,7 +159,6 @@ class Login extends Component {
                <Loader color="#0FC86F" speed={1} className="spinner" />
             </div>
             : ''}
-          {/* <script type='text/javascript' src='./js/login.js' /> */}
         </div>
     );
   }
