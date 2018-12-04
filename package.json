@@ -1,5 +1,5 @@
 {
-  "name": "diary frontend",
+  "name": "diary",
   "version": "1.0.0",
   "description": "client implementation of the lotus author haven",
   "main": "index.js",
