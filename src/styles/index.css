@@ -153,7 +153,7 @@ header button:hover{
   background: linear-gradient(
       rgba(53, 66, 74, 0.45),
       rgba(53, 66, 74, 0.45)
-    ),  url('../img/bg.png') no-repeat;
+    ),  url('/images/bg.png') no-repeat;
   background-size: cover;
   text-align: center;
   color: #ffffff;
@@ -212,6 +212,35 @@ footer{
   align-content: center;
 }
 
+.reminder-wrapper{
+  display:grid;
+  /* grid-template-columns:1fr 1fr 1fr;*/
+  grid-template-columns:repeat(3, 1fr);
+  grid-gap:1em;
+  /* grid-auto-rows:100px; */
+  grid-auto-rows: minmax(100px, auto);
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.center-element{
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-image{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.box1 { 
+  grid-column-start: 1; 
+  grid-column-end: 3; 
+}
+
 #reminder .reminder-box{
   padding-top: 40px;
   padding-right: 10%;
@@ -225,7 +254,6 @@ footer{
 
   #reminder img{
     padding-right: 5%;
-    width: 50%;
     text-align: center;
     align-content: center;
     overflow: auto;
@@ -250,7 +278,7 @@ footer{
   background: linear-gradient(
       rgba(53, 66, 74, 0.45),
       rgba(53, 66, 74, 0.45)
-    ),  url('../img/walk.png') no-repeat;
+    ),  url('/images/walk.png') no-repeat;
   background-size: cover;
   text-align: center;
   color: #ffffff;
@@ -299,7 +327,7 @@ footer{
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url('../img/loade.gif') 50% 50% no-repeat;
+	background: url('/images/loade.gif') 50% 50% no-repeat;
 }
 
 .loaderNone{
@@ -310,7 +338,7 @@ footer{
   background: linear-gradient(
       rgba(53, 66, 74, 0.45),
       rgba(53, 66, 74, 0.45)
-    ),  url('../img/bg.png') no-repeat;
+    ),  url('/images/bg.png') no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -467,7 +495,7 @@ footer{
 }
 
 .errorImage{
-  background: url('../img/errorbg.png') no-repeat;
+  background: url('/images/errorbg.png') no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -608,7 +636,7 @@ footer{
     display: inline-block;
     width: 56px;
     height: 56px;
-    background: url('../img/plus.png') center no-repeat;
+    background: url('/images/plus.png') center no-repeat;
   }
 
 
@@ -746,6 +774,27 @@ footer{
     grid-template-columns:repeat(1, 1fr);
     grid-template-rows: 3;
     grid-gap:1em;
+  }
+
+  .reminder-wrapper{
+    grid-template-columns:repeat(1, 1fr);
+    grid-gap:1em;
+    grid-auto-rows: minmax(100px, auto);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .grid-image{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .box1 { 
+    grid-column-start: 1; 
+    grid-column-end: 1; 
   }
 
   header #branding,
