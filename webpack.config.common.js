@@ -23,13 +23,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true,
     port: 8080,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        secure: false,
-        changeOrigin: true
-      }
-    }
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -5,7 +5,8 @@ const initialState = {
   auth: {
     isAuth: false,
     userResponse: {}
-  }
+  },
+  entries: {}
 };
 
 export default initialState;

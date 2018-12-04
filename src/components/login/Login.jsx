@@ -13,6 +13,9 @@ import loginUser from '../../action/login';
 // helper function
 import Validation from '../../helpers/UserValidation';
 
+// components
+import Header from '../reusables/header';
+
 /**
  * @desc renders Login page
  * @param {string} postData
@@ -96,38 +99,13 @@ class Login extends Component {
     return (
         <div className='login-body'>
           <header id='myHeader'>
-            <div className='container'>
-              <div id='branding'>
-                <h1>
-                  <span className='highlight'>Personal</span>Diary
-                </h1>
-              </div>
-              <nav>
-                <ul>
-                  <li className='home'>
-                    <a href='/'>Home</a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <button className='current-page'>LOG IN</button>
-                    </a>
-                  </li>
-                  <li>
-                    <a href='/signup'>
-                      <button>SIGN UP</button>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+            <Header />
           </header>
-          <div className='errorHeaderNone' id='errorHead' />
           {this.state.error
             ? <div className='errorHeader' id='errorHead'>
                 <p>{this.state.errorMessage}</p>
              </div>
             : ''}
-          <div className='loaderNone' id='loadDiv' />
           <div className='loginbox' id='logBox'>
             <h1>Login Here</h1>
             <form id='loginUsers'
@@ -147,6 +125,7 @@ class Login extends Component {
                 name='password'
                 value={this.state.password}
                 onChange={this.handleChange}
+                placeholder="Enter Password"
                 id='password'
                 autoComplete="new-password"
               />

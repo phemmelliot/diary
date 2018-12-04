@@ -1,11 +1,11 @@
 {
-  "name": "lotus-ah-frontend",
+  "name": "diary",
   "version": "1.0.0",
   "description": "client implementation of the lotus author haven",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/**/*.js src/**/*.jsx --fix",
-    "start": "node app.js",
+    "start": "babel-node ./node_modules/webpack/bin/webpack.js --config webpack.config.dev.js",
     "build": "babel-node ./node_modules/webpack/bin/webpack.js --config webpack.config.prod.js",
     "start:dev": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack.config.dev.js --hot --color --open",
     "test": " NODE_ENV=test SERVER_URL=http://localhost:5000 jest",
@@ -33,14 +33,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andela/lotus-ah-frontend.git"
+    "url": "git+https://github.com/phemmelliot/diary.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andela/lotus-ah-frontend/issues"
+    "url": "https://github.com/andela/phemmelliot/diary"
   },
-  "homepage": "https://github.com/andela/lotus-ah-frontend#readme",
+  "homepage": "https://github.com/phemmelliot/diary#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
@@ -83,10 +83,12 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "@babel/node": "^7.0.0",
     "@babel/template": "^7.1.2",
     "@material-ui/core": "^3.5.1",
     "axios": "^0.18.0",
     "axios-mock-adapter": "^1.15.0",
+    "@babel/cli": "^7.1.2",
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "bootstrap": "^4.1.3",
@@ -130,6 +132,7 @@
     "redux-thunk": "^2.3.0",
     "serve-favicon": "^2.5.0",
     "slick-carousel": "^1.8.1",
+    "webpack-cli": "^3.1.2",
     "sweetalert": "^2.1.2",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2"
