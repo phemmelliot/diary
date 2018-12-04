@@ -37,7 +37,7 @@ class Login extends Component {
       if (response.payload.status === 200) {
         localStorage.setItem('token', response.payload.data.token);
         localStorage.setItem('user_id', response.payload.data.user_id);
-        window.location = '/entries';
+        this.props.history.push('/entries');
       } else if (response.status === 400) {
         this.setState({
           errorMessage: 'Invalid Email or Password',
@@ -139,7 +139,7 @@ class Login extends Component {
                 autoComplete="new-password"
               />
               <input type='submit' name='' value='Login' />
-              <a href='./signup'>Create an account</a>
+              <Link to='./signup'>Create an account</Link>
             </form>
           </div>
           {this.state.loading
@@ -156,6 +156,7 @@ Login.propTypes = {
   loginUser: PropTypes.func.isRequired,
   userResponse: PropTypes.object,
   isAuth: PropTypes.bool,
+  history: PropTypes.object
 };
 
 const mapStateToProps = state => ({

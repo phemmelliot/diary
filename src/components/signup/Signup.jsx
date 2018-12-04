@@ -34,7 +34,7 @@ class Signup extends Component {
       if (response.payload.status === 201) {
         localStorage.setItem('token', response.payload.data.token);
         localStorage.setItem('user_id', response.payload.data.user_id);
-        window.location = '/entries';
+        this.props.history.push('/login');
       } else if (response.status === 400) {
         this.setState({
           errorMessage: 'Invalid Email or Password',
@@ -172,6 +172,7 @@ Signup.propTypes = {
   signupUser: PropTypes.func.isRequired,
   userResponse: PropTypes.object,
   isAuth: PropTypes.bool,
+  history: PropTypes.object
 };
 
 const mapStateToProps = state => ({
