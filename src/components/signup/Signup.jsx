@@ -12,7 +12,9 @@ import signupUser from '../../action/signup';
 
 // helper function
 import Validation from '../../helpers/UserValidation';
-// eslint-disable-next-line valid-jsdoc
+
+// components
+import Header from '../reusables/header';
 /**
  * @desc renders Signup page
  */
@@ -101,30 +103,7 @@ class Signup extends Component {
       <div>
         <div className='login-body'>
           <header id='myHeader'>
-            <div className='container'>
-              <div id='branding'>
-                <h1>
-                  <span className='highlight'>Personal</span>Diary
-                </h1>
-              </div>
-              <nav>
-                <ul>
-                  <li className='home'>
-                    <a href='/'>Home</a>
-                  </li>
-                  <li>
-                    <a href='./login'>
-                      <button>LOG IN</button>
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <button className='current-page'>SIGN UP</button>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+            <Header />
           </header>
           <div className='errorHeaderNone' id='errorHead' />
           {this.state.error
@@ -160,6 +139,8 @@ class Signup extends Component {
                 value={this.state.password}
                 onChange={this.handleChange}
                 name='password'
+                placeholder="Enter Password"
+                autoComplete="new-complete"
                 id='password'
               />
               <input type='submit' name='' value='Sign Up' />
@@ -184,8 +165,8 @@ Signup.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  isAuth: state.login.isAuth,
-  userResponse: state.login.userResponse
+  isAuth: state.signup.isAuth,
+  userResponse: state.signup.userResponse
 });
 
 export default connect(

@@ -45,6 +45,7 @@ header{
   background: #35424a;
   color: #ffffff;
   padding-top: 30px;
+  padding-bottom: 20px;
   min-height: 70px;
   border-bottom: #4CAF50 3px solid;
 
@@ -642,7 +643,7 @@ footer{
 
 /* Modal */
 .modal {
-    display: none;
+    display: block;
     position: fixed;
     z-index: 1;
     padding-top: 13%;
@@ -716,6 +717,8 @@ footer{
   border-radius: 1px;
   border-radius: 2px solid #0080FF ;
   margin-top: 10px;
+  margin-bottom: 10px;
+  width: -webkit-fill-available;
   color: #35424a;
   padding-left: 5px;
   padding-left: 5px;
