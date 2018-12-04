@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Loader from 'react-loader';
 import swal from 'sweetalert';
-
+import { Link } from 'react-router-dom';
 // action
 import {
   getAllEntries, updateEntry, createEntry, deleteEntry
@@ -17,7 +17,6 @@ import {
 import Validation from '../../helpers/UserValidation';
 
 // components
-import Header from '../reusables/header';
 import AddModal from './AddEntry';
 
 /**
@@ -102,7 +101,28 @@ class Entries extends Component {
     return (
       <div id='entriesBody'>
         <header id='myHeader'>
-          <Header />
+        <div className='container'>
+    <div id='branding'>
+      <h1>
+        <span className='highlight'>Personal</span>Diary
+      </h1>
+    </div>
+    <nav>
+      <ul>
+        <li className='current'>
+          <Link to='/entries'>Diary Entries</Link>
+        </li>
+        <li className='current'>
+          <Link to='/profile'>Profile</Link>
+        </li>
+        <li>
+          <Link to='/'>
+            <button>LOG OUT</button>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
         </header>
         {this.state.error
           ? <div className='errorHeader' id='errorHead'>
