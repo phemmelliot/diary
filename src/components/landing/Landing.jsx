@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 
 // components
-import Header from '../reusables/header';
 
 /**
  * @desc renders Landing page
@@ -13,7 +12,18 @@ class Landing extends Component {
       <div>
         <body>
           <header id='myHeader'>
-             <Header />
+          <div className="container">
+        <div id="branding">
+          <h1><span className="highlight">Personal</span>Diary</h1>
+        </div>
+        <nav>
+          <ul>
+            <li className="current"><a href="/">Home</a></li>
+            <li><a href="/login"><button>LOG IN</button></a></li>
+            <li><a href="/signup"><button>SIGN UP</button></a></li>
+          </ul>
+        </nav>
+      </div>
           </header>
 
           <section id='showcase'>

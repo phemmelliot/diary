@@ -15,10 +15,10 @@ export default function header() {
           <a href='#'>Diary Entries</a>
         </li>
         <li className='current'>
-          <a href='profile.html'>Profile</a>
+          <a href='/profile'>Profile</a>
         </li>
         <li>
-          <a href='index.html'>
+          <a href='/index'>
             <button>LOG OUT</button>
           </a>
         </li>
