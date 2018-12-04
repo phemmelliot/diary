@@ -47,7 +47,7 @@ class Entries extends Component {
         });
       } else if (response.payload.status === 401) {
         console.log('It should be in login page now');
-        window.location = '/login';
+        this.props.history.push('/login');
       } else if (response.payload.status === 200) {
         this.setState({
           entries: response.payload.data.data.entries,
@@ -170,6 +170,7 @@ Entries.propTypes = {
   updateEntryResponse: PropTypes.object,
   createEntryResponse: PropTypes.object,
   deleteEntryResponse: PropTypes.object,
+  history: PropTypes.object
 };
 
 const mapStateToProps = state => ({
