@@ -320,25 +320,25 @@ footer{
 
 
 /*Login Page*/
-.loader {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url('/images/loade.gif') 50% 50% no-repeat;
-}
-
-.loaderNone{
-  display: none;
-}
 
 .login-body{
   background: linear-gradient(
       rgba(53, 66, 74, 0.45),
       rgba(53, 66, 74, 0.45)
     ),  url('/images/bg.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+}
+
+.loading{
+  background: linear-gradient(
+      rgba(244, 247, 248, 0.068),
+      rgba(239, 246, 250, 0.349)
+    ),  no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
