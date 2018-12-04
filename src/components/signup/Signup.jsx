@@ -34,7 +34,7 @@ class Signup extends Component {
       if (response.payload.status === 201) {
         localStorage.setItem('token', response.payload.data.token);
         localStorage.setItem('user_id', response.payload.data.user_id);
-        this.props.history.push('/login');
+        this.props.history.push('/entries');
       } else if (response.status === 400) {
         this.setState({
           errorMessage: 'Invalid Email or Password',
