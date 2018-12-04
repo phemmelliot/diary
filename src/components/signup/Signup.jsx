@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Loader from 'react-loader';
+import { Link } from 'react-router-dom';
 
 // action
 import signupUser from '../../action/signup';
@@ -107,9 +108,9 @@ class Signup extends Component {
         </div>
         <nav>
           <ul>
-            <li className="current"><a href="/">Home</a></li>
-            <li><a href="/login"><button>LOG IN</button></a></li>
-            <li><a href="/signup"><button>SIGN UP</button></a></li>
+            <li className="current"><Link to="/">Home</Link></li>
+            <li><Link to="/login"><button>LOG IN</button></Link></li>
+            <li><Link to="/signup"><button>SIGN UP</button></Link></li>
           </ul>
         </nav>
       </div>

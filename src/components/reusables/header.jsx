@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line require-jsdoc
 export default function header() {
@@ -12,15 +13,15 @@ export default function header() {
     <nav>
       <ul>
         <li className='current'>
-          <a href='#'>Diary Entries</a>
+          <Link to='/entries'>Diary Entries</Link>
         </li>
         <li className='current'>
-          <a href='/profile'>Profile</a>
+          <Link to='/profile'>Profile</Link>
         </li>
         <li>
-          <a href='/index'>
+          <Link href='/'>
             <button>LOG OUT</button>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

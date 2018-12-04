@@ -1,5 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 // components
 
@@ -18,9 +19,9 @@ class Landing extends Component {
         </div>
         <nav>
           <ul>
-            <li className="current"><a href="/">Home</a></li>
-            <li><a href="/login"><button>LOG IN</button></a></li>
-            <li><a href="/signup"><button>SIGN UP</button></a></li>
+            <li className="current"><Link to="/">Home</Link></li>
+            <li><Link to="/login"><button>LOG IN</button></Link></li>
+            <li><Link to="/signup"><button>SIGN UP</button></Link></li>
           </ul>
         </nav>
       </div>
