@@ -10,6 +10,7 @@ import Landing from './landing/Landing';
 import Login from './login/Login';
 import Signup from './signup/Signup';
 import Entries from './entries/Entries';
+import Profile from './profile/profile';
 
 // const history = createBrowserHistory();
 
@@ -24,6 +25,7 @@ const AppRouter = () => (
       <Route exact path='/login' component={Login} />
       <Route exact path='/signup' component={Signup} />
       <Route exact path='/entries' component={Entries} />
+      <Route exact path='/profile' component={Profile} />
     </Switch>
   </Router>
 );
