@@ -73,6 +73,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "compression": "^1.7.3",
     "copy-webpack-plugin": "^4.6.0",
     "coveralls": "^3.0.2",
